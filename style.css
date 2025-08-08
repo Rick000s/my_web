@@ -54,7 +54,6 @@ footer {
   padding: 15px 0;
   text-align: center;
   z-index: 9999;      /* щоб футер був поверх іншого */
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* тінь зверху, щоб відділити */
 }
 
 footer h3 {
