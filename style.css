@@ -1,4 +1,4 @@
-/* Загальні налаштування */
+/* ==== Загальні налаштування ==== */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,24 +11,42 @@ body {
   color: #eee;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
-/* Банер */
+/* ==== Банер ==== */
 header {
   width: 100%;
-  height: 400px;
+  min-height: 250px;
   background: url('images/GitHubbaner.png') no-repeat center center;
   background-size: cover;
-  font-size: 3vw; /* 3% від ширини вікна */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Меню */
+header h1 {
+  font-size: clamp(20px, 5vw, 48px); /* адаптивний розмір */
+  color: #fff;
+  text-shadow: 0 0 10px #a100ff, 0 0 20px #a100ff;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  from { text-shadow: 0 0 5px #a100ff, 0 0 15px #a100ff; }
+  to { text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff; }
+}
+
+/* ==== Меню ==== */
 nav {
   background: #3a056e;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 nav a {
@@ -45,21 +63,24 @@ nav a:hover {
   box-shadow: 0 0 10px #a100ff;
 }
 
-/* Основна частина */
+/* ==== Основна частина ==== */
 main {
-  flex: 1; /* займає весь простір між хедером і футером */
+  flex: 1;
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Футер */
+/* ==== Футер ==== */
 footer {
   background-color: #D3D3D3;
   color: black;
   padding: 15px 0;
   text-align: center;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+  position: sticky; /* прилипає до низу, якщо контенту мало */
+  bottom: 0;
+  width: 100%;
 }
 
 footer h3 {
@@ -95,7 +116,24 @@ footer .social-links a:hover {
   text-shadow: 0 0 5px #a100ff;
 }
 
-/* Для друку */
+/* ==== Адаптивність ==== */
+@media (max-width: 768px) {
+  nav {
+    gap: 10px;
+  }
+  main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* ==== Для друку ==== */
 @media print {
   body {
     background: #fff !important;
