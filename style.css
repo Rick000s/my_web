@@ -9,9 +9,9 @@ body {
 /* Банер */
 header {
   width: 100%;
-  height: 300px; /* Підлаштуй під свій банер */
-  background: url("images/Git%20Hub%20baner.png") no-repeat center center;
-  background-size: cover;
+  height: 400px; /* Висота банера */
+  background: url('images/GitHubbaner.png') no-repeat center center;
+  background-size: cover; /* Щоб зображення заповнювало всю ширину */
 }
 
 /* Меню */
