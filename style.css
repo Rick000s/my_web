@@ -19,6 +19,7 @@ header {
   height: 400px;
   background: url('images/GitHubbaner.png') no-repeat center center;
   background-size: cover;
+  font-size: 3vw; /* 3% від ширини вікна */
 }
 
 /* Меню */
