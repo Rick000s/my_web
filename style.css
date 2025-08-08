@@ -1,15 +1,20 @@
+/* Загальні налаштування */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #2e0854;
-  color: #eee; 
+  color: #eee;
 }
+
+/* Банер */
 header {
   width: 100%;
-  height: 300px; /* або висота твого банера */
-  background: url('images/banner.jpg') no-repeat center center;
+  height: 300px; /* Підлаштуй під свій банер */
+  background: url('images/Git Hub baner.png') no-repeat center center;
   background-size: cover;
 }
+
+/* Меню */
 nav {
   background: #3a056e;
   display: flex;
@@ -17,6 +22,8 @@ nav {
   gap: 20px;
   padding: 10px 0;
 }
+
+/* Кнопки меню */
 nav a {
   color: #eee;
   text-decoration: none;
@@ -28,6 +35,8 @@ nav a {
 nav a:hover {
   background: #6e3cd9;
 }
+
+/* Основна частина */
 main {
   padding: 20px;
   max-width: 900px;
