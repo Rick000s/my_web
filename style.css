@@ -45,13 +45,16 @@ main {
 
 /* Футер */
 footer {
-  background-color: #D3D3D3; /* світло-сірий фон */
-  width: 100%;
-  color: #333; /* темний текст для кращої читабельності */
+  position: fixed;    /* фіксуємо футер на місці */
+  bottom: 0;          /* прилягає до низу вікна */
+  left: 0;            /* від лівого краю */
+  width: 100%;        /* на всю ширину */
+  background-color: #D3D3D3;  /* твій сірий фон */
+  color: black;       /* текст чорний, або як хочеш */
+  padding: 15px 0;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 50px;
-  border-top: 1px solid #bbb;
+  z-index: 9999;      /* щоб футер був поверх іншого */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* тінь зверху, щоб відділити */
 }
 
 footer h3 {
