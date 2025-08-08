@@ -19,7 +19,7 @@ header {
   width: 100%;
   min-height: 250px;
   background: url('images/GitHubbaner.png') no-repeat center center;
-  background-size: cover;
+  background-size: 100% auto;
   display: flex;
   align-items: center;
   justify-content: center;
