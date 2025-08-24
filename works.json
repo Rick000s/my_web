@@ -1,12 +1,12 @@
 [
   {
     "file": "works/logo1.png",
-    "category": "logo",
+    "category": "logos",
     "description": "Logo design for a creative brand."
   },
   {
     "file": "works/poster1.png",
-    "category": "poster",
+    "category": "posters",
     "description": "Poster made for a music event."
   },
   {
