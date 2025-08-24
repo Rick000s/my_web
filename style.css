@@ -117,3 +117,41 @@ footer .social-links a:hover {
 @media (max-width: 480px) {
   nav a { padding: 6px 10px; font-size: 14px; }
 }
+/* Галерея */
+.gallery-menu {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.gallery-menu button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #3a056e;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-menu button:hover {
+  background: #6e3cd9;
+  box-shadow: 0 0 10px #a100ff;
+}
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery-items .item {
+  width: 200px;
+}
+
+.gallery-items .item img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
