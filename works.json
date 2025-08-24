@@ -1,0 +1,17 @@
+[
+  {
+    "file": "works/logo1.png",
+    "category": "logo",
+    "description": "Logo design for a creative brand."
+  },
+  {
+    "file": "works/poster1.png",
+    "category": "poster",
+    "description": "Poster made for a music event."
+  },
+  {
+    "file": "works/3d1.png",
+    "category": "3d",
+    "description": "3D model of a modern chair."
+  }
+]
