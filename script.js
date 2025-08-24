@@ -38,17 +38,17 @@ galleryData.forEach(item => {
 
 // 3️⃣ Фільтр кнопками
 const buttons = document.querySelectorAll('.gallery-menu button');
-const items = document.querySelectorAll('.gallery-items .item');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.dataset.category;
+    const items = document.querySelectorAll('.gallery-items .item');
 
     items.forEach(item => {
-      if (category === 'all') {
+      if (category === 'all' || item.classList.contains(category)) {
         item.style.display = 'block';
       } else {
-        item.style.display = item.classList.contains(category) ? 'block' : 'none';
+        item.style.display = 'none';
       }
     });
   });
