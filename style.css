@@ -18,8 +18,9 @@ body {
 header {
   width: 100%;
   min-height: 250px;
+  max-height: 400px; /* обмеження висоти банера */
   background: url('images/GitHubbaner.png') no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover; /* щоб банер масштабувався і не виходив за межі */
   display: flex;
   align-items: center;
   justify-content: center;
