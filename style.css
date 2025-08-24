@@ -16,10 +16,12 @@ body {
 /* ==== Банер ==== */
 header {
   width: 100%;
+  max-width: 1200px; /* максимум ширини банера */
+  margin: 0 auto; /* центр блоку */
   min-height: 250px;
   max-height: 400px;
   background: url('images/GitHubbaner.png') no-repeat center center;
-  background-size: 80% auto; /* ширина 80%, висота автоматично */
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
