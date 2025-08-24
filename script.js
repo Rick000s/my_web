@@ -1,23 +1,11 @@
 // 1️⃣ Дані галереї
 const galleryData = [
-  {
-    category: 'logos',
-    title: 'Logo 1',
-    image: 'works/logo1.png',
-    description: 'My first logo'
-  },
-  {
-    category: 'posters',
-    title: 'Poster 1',
-    image: 'works/poster1.png',
-    description: 'My first poster'
-  },
-  {
-    category: '3d',
-    title: '3D Model 1',
-    image: 'works/3d1.png',
-    description: 'My first 3D model'
-  }
+  { category: 'logos', title: 'Logo 1', image: 'works/logo1.png', description: 'My first logo' },
+  { category: 'logos', title: 'Logo 2', image: 'works/logo2.png', description: 'Another logo' },
+  { category: 'posters', title: 'Poster 1', image: 'works/poster1.png', description: 'My first poster' },
+  { category: 'posters', title: 'Poster 2', image: 'works/poster2.png', description: 'Another poster' },
+  { category: '3d', title: '3D Model 1', image: 'works/3d1.png', description: 'My first 3D model' },
+  { category: '3d', title: '3D Model 2', image: 'works/3d2.png', description: 'Another 3D model' }
 ];
 
 // 2️⃣ Вставка картинок на сторінку
@@ -45,10 +33,10 @@ buttons.forEach(button => {
     const items = document.querySelectorAll('.gallery-items .item');
 
     items.forEach(item => {
-      if (category === 'all' || item.classList.contains(category)) {
+      if (category === 'all') {
         item.style.display = 'block';
       } else {
-        item.style.display = 'none';
+        item.style.display = item.classList.contains(category) ? 'block' : 'none';
       }
     });
   });
