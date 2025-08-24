@@ -11,27 +11,29 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-  margin: 0;
 }
 
 /* ==== Банер ==== */
 header {
   width: 100%;
   min-height: 250px;
-  max-height: 400px; /* обмеження висоти банера */
+  max-height: 400px;
   background: url('images/GitHubbaner.png') no-repeat center center;
-  background-size: cover; /* щоб банер масштабувався і не виходив за межі */
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 header h1 {
   font-size: clamp(20px, 5vw, 48px);
   color: #fff;
   text-shadow: 0 0 10px #a100ff, 0 0 20px #a100ff;
   animation: neonPulse 2s infinite alternate;
+  z-index: 1;
 }
 @keyframes neonPulse {
   from { text-shadow: 0 0 5px #a100ff, 0 0 15px #a100ff; }
@@ -46,6 +48,9 @@ nav {
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 nav a {
   color: #eee;
@@ -70,7 +75,7 @@ main {
 
 /* ==== Футер ==== */
 footer {
-  background-color: #2b003d; /* темно-фіолетовий */
+  background-color: #2b003d;
   color: #fff;
   padding: 15px 0;
   text-align: center;
