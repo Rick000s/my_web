@@ -1,85 +1,119 @@
-/* Загальні стилі */
-* {
+/* ==== Загальні налаштування ==== */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
-
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  min-height: 100vh;
+  background: #2e0854;
+  color: #eee;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
-/* Шапка */
+/* ==== Банер ==== */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  width: 100%;
+  min-height: 250px;
+  max-height: 400px;
+  background: url('images/GitHubbaner.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  flex-shrink: 0;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+header h1 {
+  font-size: clamp(20px, 5vw, 48px);
+  color: #fff;
+  text-shadow: 0 0 10px #a100ff, 0 0 20px #a100ff;
+  animation: neonPulse 2s infinite alternate;
+  z-index: 1;
+}
+@keyframes neonPulse {
+  from { text-shadow: 0 0 5px #a100ff, 0 0 15px #a100ff; }
+  to { text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff; }
 }
 
-/* Навігація */
+/* ==== Меню ==== */
 nav {
-  background-color: #444;
-  padding: 10px 0;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Основний контент */
-main {
-  flex: 1; /* Це примушує main займати весь доступний простір */
-  padding: 20px;
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* Футер */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-footer .social-links {
-  list-style: none;
-  margin-top: 10px;
+  background: #3a056e;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
-footer .social-links li a {
-  color: #fff;
+nav a {
+  color: #eee;
   text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+nav a:hover {
+  background: #6e3cd9;
+  box-shadow: 0 0 10px #a100ff;
 }
 
-footer .social-links li a:hover {
-  text-decoration: underline;
+/* ==== Основна частина ==== */
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Адаптивність */
+/* ==== Футер ==== */
+footer {
+  background-color: #2b003d;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+}
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+footer .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+footer .social-links li {
+  display: inline;
+}
+footer .social-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+footer .social-links a:hover {
+  color: #a100ff;
+  text-shadow: 0 0 5px #a100ff;
+}
+
+/* ==== Адаптивність ==== */
 @media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 5px 0;
-  }
+  nav { gap: 10px; }
+  main { padding: 15px; }
+}
+@media (max-width: 480px) {
+  nav a { padding: 6px 10px; font-size: 14px; }
 }
